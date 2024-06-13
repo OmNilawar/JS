@@ -1,0 +1,4 @@
+/*
+    we store the memory in two form 
+    heap and stack
+*/

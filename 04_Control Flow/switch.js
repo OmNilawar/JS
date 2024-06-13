@@ -1,0 +1,1 @@
+//switch case :- switch case is used to compare the value of the variable with multiple cases.
