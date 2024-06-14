@@ -1,6 +1,7 @@
 //Do while Loop :-
 
-//The do while loop is similar to the while loop except that the condition is always executed after the statements inside the loop are executed. This means that the statements inside the loop are always executed at least once.
+//The do while loop is similar to the while loop except that the condition is always executed after the statements inside the loop are executed. 
+//This means that the statements inside the loop are always executed at least once.
 
 /* 
 Syntax :-
