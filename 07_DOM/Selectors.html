@@ -1,0 +1,72 @@
+//There are many type of selectors in DOM
+
+//1.GetElementById :-
+/*
+ID name
+it is use to get the element by the unique id name
+const element = document.GetElementById('name');
+*/
+
+//2.GetElementByClassName :-
+/*
+Class name
+it is use to get the element by the class name
+const element = document.GetElementByClassName('name');
+*/
+
+//3.GetElementByTagName :-
+/*
+it is use to get the element by the tag name
+const element = document.GetElementByTagName('name');
+*/
+
+//4.GetElementByQuerySelector :-
+/*
+name of tag
+it is use to get the element by the query selector
+const element = document.GetElementByQuerySelector('name');
+*/
+
+//5.GetElementByQuerySelectorAll :-
+/*
+name of tag
+it is use to get the all the element by the by that query name
+const element = document.GetElementByQuerySelectorAll('name');
+*/
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Selectors</title>
+</head>
+<body>
+    <h1>DOM Selectors</h1>
+    <div id="container">
+        <h2 class="heading">This is heading</h2>
+        <p class="para">This is paragraph</p>
+        <p class="para">This is paragraph</p>
+        <p class="para">This is paragraph</p>
+    </div>
+    <script>
+        //GetElementById
+        const container = document.getElementById('container');
+        console.log(container);
+
+        //GetElementByClassName
+        const para = document.getElementsByClassName('para');
+        console.log(para);
+
+        //GetElementByTagName
+        const heading = document.getElementsByTagName('h2');
+        console.log(heading);
+
+        //GetElementByQuerySelector
+        const heading1 = document.querySelector('.heading');
+        console.log(heading1);
+
+        //GetElementByQuerySelectorAll
+        const para1 = document.querySelectorAll('.para');
+        console.log(para1);
+    </script>
+</body>
+</html>
