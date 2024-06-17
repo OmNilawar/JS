@@ -1,0 +1,46 @@
+<!-- this file is used to learn about how to edit and delete element using DOM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#121212; color: #fff;">
+    <ul class="parent">
+        <li class="lang">JavaScript</li>
+        <li class="lang">Python</li>
+        <li class="lang">Ruby</li>
+        <li class="lang">Rust</li>
+    </ul>
+</body>
+<script>
+    // to edit the HTML we can change the inner HTML or We can make new Element and replace it with existing one
+
+    //edit
+
+    const li = document.querySelector('li:nth-child(2)');
+    console.log(li);
+    const newLi = document.createElement('li');
+    newLi.appendChild(document.createTextNode('hello re')); 
+    li.replaceChildren(newLi)
+
+    //function to edit the Element
+    function change(text,position){
+        const li = document.querySelector(`li:nth-child(${position})`);
+        const newLi = document.createElement('li');
+        newLi.appendChild(document.createTextNode(text)); 
+        li.replaceChildren(newLi)
+    }
+
+    change("CPP",2)
+
+    // to remove an element
+    //first select it
+    const li2 = document.querySelector('li:nth-child(3)');
+
+    //then use remove() function
+    // li2.remove();
+
+</script>
+</html>
