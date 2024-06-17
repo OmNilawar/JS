@@ -1,0 +1,42 @@
+<!-- This file Teach Us How Family Tree Works in HTML (Parent and Child and Sibling) using DOM manipulation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <p class="days">Monday</p>
+        <p class="days">Tuesday</p>
+        <p class="days">Wednesday</p>
+        <p class="days">Thusday</p>
+    </div>
+    <script>
+        //this gives us the parent element
+        const block = document.querySelector('.parent');
+        console.log(block);
+
+        //to see the childs of that parent
+        console.log(block.children);
+
+        //to get the total no. of child
+        console.log(block.childElementCount);
+
+        //to get all info of childs in that parent div
+        console.log(block.childNodes);
+
+        //to get the first child
+        console.log(block.firstElementChild);
+
+        //use to get next sibling of that child
+        const firstDay = block.firstElementChild;
+
+        console.log(firstDay.nextElementSibling);
+        
+        //use to get Parent Of that Child
+        console.log(firstDay.parentElement);
+    </script>
+</body>
+</html>
