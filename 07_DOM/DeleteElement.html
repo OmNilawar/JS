@@ -19,21 +19,23 @@
 
     //edit
 
-    const li = document.querySelector('li:nth-child(2)');
-    console.log(li);
+    const li = document.querySelector('li:nth-child(1)');
+    console.log(li); 
     const newLi = document.createElement('li');
     newLi.appendChild(document.createTextNode('hello re')); 
-    li.replaceChildren(newLi)
+    li.replaceWith(newLi)
 
     //function to edit the Element
     function change(text,position){
+
         const li = document.querySelector(`li:nth-child(${position})`);
         const newLi = document.createElement('li');
-        newLi.appendChild(document.createTextNode(text)); 
-        li.replaceChildren(newLi)
+        newLi.textContent = text;
+        console.log(newLi)
+        li.replaceWith(newLi);
     }
 
-    change("CPP",2)
+    change("hello",2)
 
     // to remove an element
     //first select it
