@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button>random</button>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        const button = document.querySelector('button');
+        const h1 = document.querySelector('h1');
+        const body = document.querySelector('body');
+        const start = document.querySelector('#start');
+        const stopi = document.querySelector('#stop');
+
+        // button.addEventListener('click',function(){
+        //     const num = Math.floor(Math.random() * 10) + 1;
+        //     h1.innerHTML = num;
+        // })
+
+        const colors = "0123456789abcdef"
+
+        function generate(){
+            let hex = "#"
+            for(let i = 0;i < 6;i++)
+            {
+                let num = Math.floor(Math.random() * 15) + 1;
+                hex += colors[num];
+            }
+            h1.innerHTML = hex;
+            body.style.backgroundColor = hex;
+        };
+
+        let IntervelID;
+        start.addEventListener('click',function(){
+            IntervelID = setInterval(generate,1000)
+        })
+
+       stopi.addEventListener('click',function(){
+        clearInterval(IntervelID);
+       })
+        
+        
+    </script>
+</body>
+</html>
